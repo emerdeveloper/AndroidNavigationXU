@@ -19,10 +19,16 @@ namespace ColorViewer
 
         void ButtonEditTextClick(object sender, System.EventArgs e)
         {
+            var fragment = new ColorsEditTextFragment();
+            //create a FragmentTransaction to show in UI
+            SupportFragmentManager.BeginTransaction().Replace(Resource.Id.frameLayout, fragment).Commit();
         }
 
         void ButtonSlidersClick(object sender, System.EventArgs e)
         {
+            var fragment = new ColorsSliderFragment();
+            //create a FragmentTransaction to show in UI
+            SupportFragmentManager.BeginTransaction().Replace(Resource.Id.frameLayout, fragment).Commit();
         }
     }
 }
